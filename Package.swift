@@ -2,19 +2,19 @@
 import PackageDescription
 
 let package = Package(
-    name: "DescopeKit",
+    name: "descope-swift-sdk", // This is the package identifier
     platforms: [
         .iOS(.v13),
         .macOS(.v12),
     ],
     products: [
         .library(
-            name: "DescopeKit",
+            name: "DescopeKit", // This keeps your import statement unchanged
             targets: ["DescopeKit"]),
     ],
     targets: [
         .target(
-            name: "DescopeKit",
+            name: "DescopeKit", // Keep this so you can use `import DescopeKit`
             path: "src",
             exclude: ["sdk/Callbacks.stencil"]),
         .testTarget(
